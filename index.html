@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquerymain.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Links Para Whatsapp</title>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="">
+
+        <!-- NavBar -->
+        <div class="nav navbar navbar-light d-flex justify-content-around verdezap">
+            <a href="#" class="navbar-brand">
+                <img src="image/icon.png" alt="" class="d-inline-block align-top logo" alt="Logo" loading="lazy">
+                <span class="text-light titulo">Whats Start Chat</span>
+            </a>
+            <div class="container text-light d-flex justify-content-around menu">
+                 <!-- Pagina 1 -->
+                <span> <a class="menulink1 mao " id="menuLinkId1">CHAT</a></span>
+                <!-- Pagina 2 -->
+                <span><a class="mao " id="menuLinkId2"> ENCURTAR</a></span>
+                 <!-- Pagina 3 -->
+                <!--  --><span><a class="menulink3 mao " id="menuLinkId2"> Sites</a></span>
+            </div>
+            
+
+        </div>
+        <!-- Fim da NavBar -->
+
+
+
+        <!-- Começo -->
+        <div class="container" id="startchat">
+            <!-- body 1 -->
+            <div class="col-12 d-flex justify-content-center align-items-center ">
+
+
+                <div class="row-12 p-2">
+                    <input value="" placeholder="11 986054586" maxlength="12" id="number" class="btn m-1 telefone" />
+                    <!-- Icon Criar-->
+                    <svg onclick="criarLink()" width="2em" height="2em" viewBox="0 0 16 16"
+                        class="bi bi-check-circle-fill gerarlink" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                    <!-- Icon And-->
+
+                </div>
+            </div>
+            <!-- Fim do Body 1-->
+
+            <div class="d-flex justify-content-center">
+                <svg id="abrircampo" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-caret-down vermais"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                </svg>
+            </div>
+            <!-- Mensagem -->
+
+            <div class="d-flex justify-content-center align-items-center text-align-center">
+                <textarea id="menssagem" class="my-1 text-dark col-12 campomensagem" cols="140"
+                    rows="4">Escreva Algo</textarea>
+            </div>
+
+            <!-- Botão Conversa -->
+
+            <div class="d-flex justify-content-center align-items-center text-align-center">
+                <a href="" onclick="abrirconversa()" target="blank" id="iniciarconversa"
+                    class="btn my-2 btniniciar">INICIAR CONVERSA
+                </a>
+            </div>
+
+
+            <div class="d-flex justify-content-center">
+                <svg id="resultadolink" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-caret-down vermais"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                </svg>
+            </div>
+            <!-- Fim do Campo da Mensagem -->
+
+            <div class="bg-white w-100 d-flex d-flex justify-content-center align-items-center text-align-center">
+                <textarea rows="4" cols="140" id="linkfinal"
+                    class="lead text-align-center p-1  flex-wrap-wrap codigozap">Aqui Ficara o Link</textarea>
+            </div>
+
+            <!-- Resultado Copiar e Colar -->
+            <div class="p-2 d-flex justify-content-around align-items-center text-align-center">
+                <button onclick="copiarTexto()" id="copiar" class="btn btniniciar">Copiar</button>
+                <button id="limpar" class="btn btniniciar ">Limpar</button>
+            </div>
+            <!-- Fim do Resultado -->
+        </div>
+        <!--Fim do Start-->
+
+
+
+
+
+
+        <!--Começo do Encurtador-->
+        <!--Começo do Encurtador-->
+        <!--Começo do Encurtador-->
+        <!--Começo do Encurtador-->
+
+        <div class="container my-4" id="pagEncurtar" style="display: none;">
+           
+            <!-- Primeiro Site -->
+            <div class="row d-flex justify-content-start pl-3 align-items-center urlstatus">
+                <div class="col col-3 col-lg-4 d-flex justify-content-center">
+                   <a href="https://bitly.com/" target="blank" > <img width="80" src="image/bitly.png" alt="">
+                </div>
+                <div class="col-auto">
+                    <h2 class="">Bitly</h2>
+                </div>
+            </div>
+
+            <!-- Segundo Site -->
+            <div class="row justify-content-start pl-3 align-items-center urlstatus">
+                <div class="col col-3 col-lg-4 d-flex justify-content-center">
+                    <a href="https://www.encurtador.com.br/" target="blank" >  <img width="80" src="image/encurtador.png" alt="">
+                </div>
+                <div class="col-auto">
+                    <h2 class="">Encurtador</h2>
+               </div>
+            </div>
+
+            <!-- Terceiro Site -->
+            <div class="row justify-content-start pl-3 align-items-center urlstatus">
+                <div class="col col-3 col-lg-4 d-flex justify-content-center">
+                    <a href="https://short.io/" target="blank" >  <img width="80" src="image/short.png" alt="">
+                </div>
+                <div class="col-auto">
+                    <h2 class="">Short.io</h2>
+                </div>            
+            </div>
+
+        </div>
+
+
+        <!--  -->
+</body>
+
+</html>
