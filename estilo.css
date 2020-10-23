@@ -10,6 +10,9 @@
 .btniniciar {
     background-color: #01e675;
 }
+.btniniciar1 {
+    background-color: #018ae6;
+}
 .verdezap{
     color:white;
     background-color: rgb(2, 136, 125);
@@ -53,9 +56,9 @@
 /* Campo Telefone  */
 
 .telefone{
-    width: 80%;
+    width: 100%;
     border: 1.4px solid rgb(2, 136, 125);
-    border-radius: 50px;
+    border-radius: 10px;
 }
 .gerarlink{
     cursor: pointer;
