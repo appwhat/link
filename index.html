@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+
     <script src="jquerymain.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -52,19 +55,23 @@
             <!-- body 1 -->
             <div class="col-12 d-flex justify-content-center align-items-center ">
 
-
-                <div class="row-12 p-2">
-                    <input value="" placeholder="11 986054586" maxlength="12" id="number" class="btn m-1 telefone" />
-                    <!-- Icon Criar-->
-                    <svg onclick="criarLink()" width="2em" height="2em" viewBox="0 0 16 16"
-                        class="bi bi-check-circle-fill gerarlink" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                    </svg>
+                <!-- InputNumber -->
+                <div class="row-auto p-2">
+                    <input value="" placeholder="DDD 9 xxxxxxxx" maxlength="12" id="number" class="btn m-1 telefone" />
+                </div>  
+                 <div class="row-3 p-2">
+                    <!-- buttonCreater -->
+                    <button type="button" class="btn btn-success d-flex justify-content-around align-items-center" onclick="criarLink()">
+                        <svg width="1.2em" height="1.2em" viewBox="0 0 14 14" class="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
+                        </svg>  
+                        <span class="pl-3">Criar</span> 
+                    </button>
+                </div>
                     <!-- Icon And-->
 
-                </div>
+               
             </div>
             <!-- Fim do Body 1-->
 
@@ -78,8 +85,8 @@
             <!-- Mensagem -->
 
             <div class="d-flex justify-content-center align-items-center text-align-center">
-                <textarea id="menssagem" class="my-1 text-dark col-12 campomensagem" cols="140"
-                    rows="4">Escreva Algo</textarea>
+                <textarea placeholder="Escreva Algo" id="menssagem" class="my-1 text-dark col-12 campomensagem" cols="140"
+                    rows="4"></textarea>
             </div>
 
             <!-- Botão Conversa -->
@@ -101,14 +108,13 @@
             <!-- Fim do Campo da Mensagem -->
 
             <div class="bg-white w-100 d-flex d-flex justify-content-center align-items-center text-align-center">
-                <textarea rows="4" cols="140" id="linkfinal"
+                <textarea readonly rows="4" cols="140" id="linkfinal"
                     class="lead text-align-center p-1  flex-wrap-wrap codigozap">Aqui Ficara o Link</textarea>
             </div>
 
             <!-- Resultado Copiar e Colar -->
             <div class="p-2 d-flex justify-content-around align-items-center text-align-center">
-                <button onclick="copiarTexto()" id="copiar" class="btn btniniciar">Copiar</button>
-                <button id="limpar" class="btn btniniciar ">Limpar</button>
+                <input type="button" onclick="copiado()" id="copiar" value="Copiar" class="btn btniniciar">
             </div>
             <!-- Fim do Resultado -->
         </div>
