@@ -13,7 +13,21 @@ function criarLink() {
     linkfinal.innerHTML = resultado;
 
     iniciarconversa.href= resultado;
-    
+
+    copiar.value="Copiar"; // Mudar o valor copiar
+    if(copiar.value == "Copiar"){
+        copiar.classList.add("btniniciar");
+        copiar.classList.remove("btniniciar1");
+        }
+
 };
 
+function copiado(){
+    copiar.value="Copiado";
+    if(copiar.value == "Copiado"){
+    copiar.classList.remove("btniniciar");
+    copiar.classList.add("btniniciar1");
+    }
+    
+}
 
