@@ -40,7 +40,7 @@ $(function () {
         var copiar = document.execCommand('copy');
     });
 });
-
+/* 
 $(function () {
     $('#limpar').click(function () {
           $("#linkfinal").slideToggle("slow");
@@ -49,4 +49,4 @@ $(function () {
         var selecionar = document.execCommand('selectAll');
         var limpar = document.execCommand('delete');
     })
-});
+}); */
