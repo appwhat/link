@@ -16,8 +16,8 @@ function criarLink() {
 
     copiar.value="Copiar"; // Mudar o valor copiar
     if(copiar.value == "Copiar"){
-        copiar.classList.add("btniniciar");
-        copiar.classList.remove("btniniciar1");
+        copiar.classList.add("btnCriar");
+        copiar.classList.remove("btniniciar");
         }
 
 };
@@ -25,8 +25,8 @@ function criarLink() {
 function copiado(){
     copiar.value="Copiado";
     if(copiar.value == "Copiado"){
-    copiar.classList.remove("btniniciar");
-    copiar.classList.add("btniniciar1");
+    copiar.classList.remove("btnCriar");
+    copiar.classList.add("btniniciar");
     }
     
 }
