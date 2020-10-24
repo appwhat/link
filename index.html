@@ -55,32 +55,38 @@
             <!-- body 1 -->
             <div class="col-12 d-flex justify-content-center align-items-center ">
 
-                <!-- InputNumber -->
-                <div class="row-auto p-2">
-                    <input value="" placeholder="DDD 9 xxxxxxxx" maxlength="12" id="number" class="btn m-1 telefone" />
+                <!-- Input Number -->
+                <div class="row-3">
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill text-secondary " fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                      </svg>
                 </div>  
+                
+                <div class="row-9 p-2">
+                    <input value="" placeholder="(DDD) 0 0000-0000" maxlength="12" id="number" class="btn m-1 telefone" />
+                </div>  
+                <!-- Input Number -->
+
                  <div class="row-3 p-2">
                     <!-- buttonCreater -->
-                    <button type="button" class="btn btn-success d-flex justify-content-around align-items-center" onclick="criarLink()">
+                    <button type="button" class="btn btnCriar d-flex justify-content-around align-items-center" onclick="criarLink()">
                         <svg width="1.2em" height="1.2em" viewBox="0 0 14 14" class="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                        <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
                         <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
                         </svg>  
                         <span class="pl-3">Criar</span> 
                     </button>
+                    <!--Fim  buttonCreater -->
                 </div>
-                    <!-- Icon And-->
 
-               
             </div>
-            <!-- Fim do Body 1-->
+
+            
 
             <div class="d-flex justify-content-center">
-                <svg id="abrircampo" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-caret-down vermais"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-                </svg>
+                <svg id="abrircampo" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-link vermais" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                  </svg>
             </div>
             <!-- Mensagem -->
 
@@ -90,33 +96,32 @@
             </div>
 
             <!-- Botão Conversa -->
-
             <div class="d-flex justify-content-center align-items-center text-align-center">
                 <a href="" onclick="abrirconversa()" target="blank" id="iniciarconversa"
-                    class="btn my-2 btniniciar">INICIAR CONVERSA
+                    class="btn my-2 btnCriar">INICIAR CONVERSA
                 </a>
             </div>
-
+            <!--Fim Botão Conversa -->
 
             <div class="d-flex justify-content-center">
-                <svg id="resultadolink" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-caret-down vermais"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-                </svg>
+                <svg id="resultadolink" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-down vermais" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                    <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                  </svg>
+                   
             </div>
             <!-- Fim do Campo da Mensagem -->
 
             <div class="bg-white w-100 d-flex d-flex justify-content-center align-items-center text-align-center">
-                <textarea readonly rows="4" cols="140" id="linkfinal"
-                    class="lead text-align-center p-1  flex-wrap-wrap codigozap">Aqui Ficara o Link</textarea>
+                <textarea readonly rows="4" cols="140" id="linkfinal" placeholder="Click em Criar"
+                    class="lead text-align-center p-1  flex-wrap-wrap codigozap"></textarea>
             </div>
 
-            <!-- Resultado Copiar e Colar -->
+            <!--Inicio Resultado Copiar -->
             <div class="p-2 d-flex justify-content-around align-items-center text-align-center">
-                <input type="button" onclick="copiado()" id="copiar" value="Copiar" class="btn btniniciar">
+                <input type="button" onclick="copiado()" id="copiar" value="Copiar" class="btn btnCriar">
             </div>
-            <!-- Fim do Resultado -->
+            <!-- Fim do Resultado Copiar-->
         </div>
         <!--Fim do Start-->
 
