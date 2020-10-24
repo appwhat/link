@@ -7,10 +7,8 @@
     font-weight: 500;
 
 }
+
 .btniniciar {
-    background-color: #01e675;
-}
-.btniniciar1 {
     background-color: #018ae6;
 }
 .verdezap{
@@ -52,12 +50,19 @@
 } 
 /*Fim Menu Link 1 e 2 */
 
+.btnCriar{
+    background-color: #26d367;
+    transition: 0.5s;
+}
+.btnCriar:hover{
+    background-color: #26a751;
+}
 
 /* Campo Telefone  */
 
 .telefone{
     width: 100%;
-    border: 1.4px solid rgb(2, 136, 125);
+    border: 1px solid rgb(2, 136, 125);
     border-radius: 10px;
 }
 .gerarlink{
