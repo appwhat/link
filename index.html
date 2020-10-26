@@ -30,22 +30,23 @@
     <div class="">
 
         <!-- NavBar -->
-        <div class="nav navbar navbar-light d-flex justify-content-around verdezap">
-            <a href="#" class="navbar-brand">
-                <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy">
-                <span class="text-light titulo">Whats Chat</span>
-            </a>
-        </div>
-        <div class="nav navbar navbar-light d-flex justify-content-around verdezap">
-            <div class="container text-light d-flex justify-content-around menu">
-                 <!-- Pagina 1 -->
-                <span> <a class="menulink1 mao " id="menuLinkId1">CHAT</a></span>
-                <!-- Pagina 2 -->
-                <span><a class="mao " id="menuLinkId2"> ENCURTAR</a></span>
-                 <!-- Pagina 3 -->
-                <!--  --><span><a class="menulink3 mao " id="menuLinkId2"> Sites</a></span>
+        <div class="verdezap">
+            <div class="nav navbar navbar-light d-flex justify-content-around">
+                <a href="#" class="navbar-brand">
+                    <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy">
+                    <span class="text-light titulo">Whats Chat</span>
+                </a>
             </div>
-            
+            <div class="nav navbar navbar-light d-flex justify-content-around">
+                <div class="container text-light d-flex justify-content-around menu">
+                    <!-- Pagina 1 -->
+                    <span> <a class="menulink1 mao " id="menuLinkId1">CHAT</a></span>
+                    <!-- Pagina 2 -->
+                    <span><a class="mao " id="menuLinkId2"> ENCURTAR</a></span>
+                    <!-- Pagina 3 -->
+                    <!--  --><span><a class="menulink3 mao " id="menuLinkId2"> Sites</a></span>
+                </div>
+            </div>
 
         </div>
         <!-- Fim da NavBar -->
@@ -59,42 +60,51 @@
 
                 <!-- Input Number -->
                 <div class="row-3">
-                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill text-secondary " fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-                      </svg>
-                </div>  
-                
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill text-secondary "
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                    </svg>
+                </div>
+
                 <div class="row-9 p-2">
-                    <input value="" placeholder="(DDD) 0 0000-0000" maxlength="12" id="number" class="btn m-1 telefone" />
-                </div>  
+                    <input value="" placeholder="(DDD) 0 0000-0000" maxlength="12" id="number"
+                        class="btn m-1 telefone" />
+                </div>
                 <!-- Input Number -->
 
-                 <div class="row-3 p-2">
+                <div class="row-3 p-2">
                     <!-- buttonCreater -->
-                    <button type="button" class="btn btnCriar d-flex justify-content-around align-items-center" onclick="criarLink()">
-                        <svg width="1.2em" height="1.2em" viewBox="0 0 14 14" class="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                       <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
-                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
-                        </svg>  
-                        <span class="pl-3">Criar</span> 
+                    <button type="button" class="btn btnCriar d-flex justify-content-around align-items-center"
+                        onclick="criarLink()">
+                        <svg width="1.2em" height="1.2em" viewBox="0 0 14 14" class="bi bi-link-45deg"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                            <path
+                                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                        </svg>
+                        <span class="pl-3">Criar</span>
                     </button>
                     <!--Fim  buttonCreater -->
                 </div>
 
             </div>
 
-            
+
 
             <div class="d-flex justify-content-center">
-                <svg id="abrircampo" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-link vermais" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
-                  </svg>
+                <svg id="abrircampo" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-link vermais"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                </svg>
             </div>
             <!-- Mensagem -->
 
             <div class="d-flex justify-content-center align-items-center text-align-center">
-                <textarea placeholder="Escreva Algo" id="menssagem" class="my-1 text-dark col-12 campomensagem" cols="140"
-                    rows="4"></textarea>
+                <textarea placeholder="Escreva Algo" id="menssagem" class="my-1 text-dark col-12 campomensagem"
+                    cols="140" rows="4"></textarea>
             </div>
 
             <!-- Botão Conversa -->
@@ -106,11 +116,14 @@
             <!--Fim Botão Conversa -->
 
             <div class="d-flex justify-content-center">
-                <svg id="resultadolink" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-down vermais" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-                    <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
-                  </svg>
-                   
+                <svg id="resultadolink" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-caret-down vermais"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                    <path
+                        d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                </svg>
+
             </div>
             <!-- Fim do Campo da Mensagem -->
 
@@ -138,11 +151,11 @@
         <!--Começo do Encurtador-->
 
         <div class="container my-4" id="pagEncurtar" style="display: none;">
-           
+
             <!-- Primeiro Site -->
             <div class="row d-flex justify-content-start pl-3 align-items-center urlstatus">
                 <div class="col col-3 col-lg-4 d-flex justify-content-center">
-                   <a href="https://bitly.com/" target="blank" > <img width="80" src="image/bitly.png" alt="">
+                    <a href="https://bitly.com/" target="blank"> <img width="80" src="image/bitly.png" alt="">
                 </div>
                 <div class="col-auto">
                     <h2 class="">Bitly</h2>
@@ -152,21 +165,22 @@
             <!-- Segundo Site -->
             <div class="row justify-content-start pl-3 align-items-center urlstatus">
                 <div class="col col-3 col-lg-4 d-flex justify-content-center">
-                    <a href="https://www.encurtador.com.br/" target="blank" >  <img width="80" src="image/encurtador.png" alt="">
+                    <a href="https://www.encurtador.com.br/" target="blank"> <img width="80" src="image/encurtador.png"
+                            alt="">
                 </div>
                 <div class="col-auto">
                     <h2 class="">Encurtador</h2>
-               </div>
+                </div>
             </div>
 
             <!-- Terceiro Site -->
             <div class="row justify-content-start pl-3 align-items-center urlstatus">
                 <div class="col col-3 col-lg-4 d-flex justify-content-center">
-                    <a href="https://short.io/" target="blank" >  <img width="80" src="image/short.png" alt="">
+                    <a href="https://short.io/" target="blank"> <img width="80" src="image/short.png" alt="">
                 </div>
                 <div class="col-auto">
                     <h2 class="">Short.io</h2>
-                </div>            
+                </div>
             </div>
 
         </div>
