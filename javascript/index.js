@@ -1,4 +1,3 @@
-
 function getLinkWA() {
     /* Get Value of Input */
     var numero = document.querySelector("#number").value;
@@ -7,7 +6,6 @@ function getLinkWA() {
         numberErro.classList.add("text-danger")
     } else {
         numberErro.classList.remove("text-danger")
-        iniciarconversa.classList.add("d-block");
         resultadolink.classList.add("d-block");
         copiar.classList.add("d-block");
         copyIdShort.classList.add("d-block");
