@@ -2,7 +2,9 @@
 $(document).ready(function () {
     $("#abrircampo").click(function () {
         $("#menssagem").slideToggle("slow");
-        $("#emoticons").slideToggle("slow");
+        $("#abrircampoEmo").slideToggle("slow");
+        $("#iconeIniciarCnversar").slideToggle("slow");
+        $("#recebEmo").slideUp("slow");
     });
     /* Esconder Campo Link Final*/
     $("#resultadolink").click(function () {
@@ -42,6 +44,11 @@ $(document).ready(function () {
             $("#recebEmo").html(result)
         }
     });
+
+    $("#abrircampoEmo").click(function(){
+       $("#recebEmo").slideToggle("slow");
+    });
+        
 
 });
 /*
