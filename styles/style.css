@@ -15,7 +15,7 @@
 .verdezap{
     font-family: 'Roboto', sans-serif;
     color:white;
-    background-color: rgb(2, 136, 125);
+    background-color: #1ebea5;
     box-shadow: .5px 1px 10px 1px #888888;
 }
 .menu a{
@@ -49,8 +49,8 @@
 
 .telefone{
     width: 100%;
-    border: 1px solid rgb(2, 136, 125);
-    border-radius: 10px;
+    border: 1px solid #1ebea5;
+    border-radius: 40px;
 }
 .gerarlink{
     cursor: pointer;
@@ -74,10 +74,14 @@ textarea{
 .codigozap{
     display:none;
 }
-.campomensagem{
-    display:none;
+#recebEmo{
+    display: none;
 }
-
+.ContainerMensagem{
+    display: none;
+}
+ 
+ 
 .encurtarurl{
     display: none;
 }
