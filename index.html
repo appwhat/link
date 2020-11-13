@@ -1,4 +1,6 @@
-<!DOCTYPE html> <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +29,12 @@
     <style>
         .menulink1::after {
             content: "";
-            width: 100px;
+            width: 80px;
             position: absolute;
             line-height: 5px;
             background-color: white;
             top: 25px;
-            left: -30px;
+            left: -20px;
             height: 6px;
         }
     </style>
@@ -63,51 +65,55 @@
     <!-- Fim da NavBar -->
 
 
-    <!-- Começo -->
+    <!-- Full DIV -->
     <div class="container" id="startchat">
         <!-- body 1 -->
         <div class="col-12 d-flex justify-content-center align-items-center ">
-
-            <!-- Input Number -->
+            <!-- Icon Telefone -->
             <div class="row-3">
-                <i class="fas fa-phone-alt " style="font-size: 1.5rem;"></i>
+                <i class="fas fa-phone-alt " style="font-size: 1.5rem; color: #3b87df"></i>
             </div>
-
+            <!-- Input Telefone -->
             <div class="row-9 p-2">
                 <input value="" placeholder="(99) 9 9999-9999" maxlength="13" id="number" class="btn m-1 telefone" />
             </div>
-            <!-- Input Number -->
-
+            <!-- Div Function Main -->
             <div class="row3 p-2">
-                <!-- buttonCreater -->
+                <!-- Button Get Function -->
                 <button type="button" class="btn btnCriar d-flex justify-content-around align-items-center"
-                    onclick="getLinkWA()"> <i id="numberErro" class="fas fa-link fa-lg d-sm-block d-none"></i> 
+                    onclick="getLinkWA()"> <i id="numberErro" class="fas fa-link fa-lg d-sm-block d-none"></i>
                     <span class="pl-0 pl-sm-2 pl-md-3">Gerar</span>
-                    </button>
-                <!--Fim  buttonCreater -->
+                </button>
             </div>
-
+            <!--And Div Get Function -->
         </div>
+        <!--And body 1 -->
+        
 
+        
+        <!--Div Messeger -->
         <div class="d-flex justify-content-center">
             <i id="abrircampo" class="far fa-keyboard fa-2x vermais"></i>
         </div>
-        <!-- Mensagem -->
-
-        <div class="d-flex justify-content-center align-items-center text-align-center ">
-            <textarea placeholder="Olá! Estou com dúvida. Pode me ajudar?" id="menssagem" class="my-1 text-dark col-12 campomensagem" cols="140"
-                rows="4"></textarea>
+       
+        <div class="d-flex justify-content-around align-items-center text-align-center ">
+            <!-- icon Eomji -->
+            <i id="abrircampoEmo" class="abrirEmoticon mx-2 vermais far fa-smile-beam fa-2x" style="color: #808080"></i>
+           
+            <textarea placeholder="Olá! Tudo Bem?" id="menssagem" class="my-1 text-dark mx-2 campomensagem" cols="140" rows="2"></textarea>
+             <!-- icon Send -->
+            <a href="" onclick="abrirconversa()" target="blank" id="iniciarconversa" class="">
+                <i  id="iconeIniciarCnversar" class="enviar mx-2 vermais fa fa-send fa-2x"></i>
+            </a>
         </div>
+
+
         <div class="campomensagem" id="emoticons">
-            <div id="recebEmo" class="d-flex justify-content-around align-items-center text-align-center px-3">
-                <!-- Receber Emotcons -->
+            <div id="recebEmo" class="p-4 justify-content-center align-items-center text-align-center px-3">
+
             </div>
         </div>
-        <!-- Botão Conversa -->
-        <div class="d-flex justify-content-center align-items-center text-align-center">
-            <a href="" onclick="abrirconversa()" target="blank" id="iniciarconversa" class="btn my-2 btnCriar d-none">
-                INICIAR CONVERSA</a>
-        </div>
+        <!--And Div Messeger -->
         <!--Fim Botão Conversa -->
 
         <div class="d-flex justify-content-center">
