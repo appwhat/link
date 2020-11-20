@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/69d4cc193b.js" crossorigin="anonymous"></script>
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Meus Script -->
+    <script src="javascript/index.js"></script>
+    <script src="javascript/jquerymain.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Whats Chat</title>
+
+    <style>
+        .menulink1::after {
+            content: "";
+            width: 80px;
+            position: absolute;
+            line-height: 5px;
+            background-color: white;
+            top: 25px;
+            left: -20px;
+            height: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <div class="verdezap">
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <a href="#" class="navbar-brand">
+                <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy">
+                <span class="text-light titulo">Whats Chat</span>
+            </a>
+        </div>
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <div class="container text-light d-flex justify-content-around menu">
+                <!-- Pagina 1 -->
+                <span> <a class="menulink1 mao " id="menuLinkId1">Chat</a></span>
+                <!-- Pagina 2 -->
+                <span><a href="encurt.html" class="mao " id="menuLinkId2">Encurtar</a></span>
+                <!-- Pagina 3 -->
+                <span><a href="call.html" class="menulink3 mao " id="menuLinkId2">Sobre</a></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fim da NavBar -->
+
+
+    <!-- Full DIV -->
+    <div class="container" id="startchat">
+        <!-- body 1 -->
+        <div class="col-12 d-flex justify-content-center align-items-center ">
+            <!-- Icon Telefone -->
+            <div class="row-3">
+                <i class="fas fa-phone-alt " style="font-size: 1.5rem; color: #3b87df"></i>
+            </div>
+            <!-- Input Telefone -->
+            <div class="row-9 p-2">
+                <input value="" type="tel" placeholder="(99) 9 9999-9999" maxlength="13" id="number" class="btn m-1 telefone" />
+            </div>
+            <!-- Div Function Main -->
+            <div class="row3 p-2">
+                <!-- Button Get Function -->
+                <button type="button" class="btn btnCriar d-flex justify-content-around align-items-center"
+                    onclick="getLinkWA()"> <i id="numberErro" class="fas fa-link fa-lg d-sm-block d-none"></i>
+                    <span class="pl-0 pl-sm-2 pl-md-3">Gerar</span>
+                </button>
+            </div>
+            <!--And Div Get Function -->
+        </div>
+        <!--And body 1 -->
+        
+
+        
+        <!--Div Messeger -->
+        <div class="d-flex justify-content-center">
+            <i id="abrircampo" class="far fa-keyboard fa-2x vermais"></i>
+        </div>
+       
+        <div class="d-flex justify-content-around align-items-center text-align-center ">
+            <!-- icon Eomji -->
+            <i id="abrircampoEmo" class="abrirEmoticon mx-2 vermais far fa-smile-beam fa-2x" style="color: #808080"></i>
+           
+            <textarea placeholder="Olá! Tudo Bem?" id="menssagem" class="my-1 text-dark mx-2 campomensagem" cols="140" rows="2"></textarea>
+             <!-- icon Send -->
+            <a href="" onclick="abrirconversa()" target="blank" id="iniciarconversa" class="">
+                <i  id="iconeIniciarCnversar" class="enviar mx-2 vermais fa fa-send fa-2x"></i>
+            </a>
+        </div>
+
+
+        <div class="campomensagem" id="emoticons">
+            <div id="recebEmo" class="p-4 justify-content-center align-items-center text-align-center px-3">
+
+            </div>
+        </div>
+        
+        <!--And Div Messeger -->
+        <!--Fim Botão Conversa -->
+
+        <div class="d-flex justify-content-center">
+            <i id="resultadolink" class="far fa-copy fa-2x d-none vermais py-1"></i>
+        </div>
+        <!-- Fim do Campo da Mensagem Final Link-->
+
+        <div class="bg-white w-100 d-flex d-flex justify-content-center align-items-center text-align-center">
+            <textarea readonly rows="2" cols="140" id="linkfinal" placeholder="Click em Criar"
+                class="lead text-align-center p-1  flex-wrap-wrap codigozap"></textarea>
+        </div>
+
+        <!--Inicio Resultado Copiar -->
+        <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+            <input type="button" onclick="copiado()" id="copiar" value="Copiar" class="btn mr-2 bg-info d-none">
+            <input type="button" id="copyIdShort" value="Encurtar" class="btn ml-2 bg-warning d-none">
+        </div>
+        <!-- Fim do Resultado Copiar-->
+    </div>
+
+</body>
+
+</html>
