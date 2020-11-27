@@ -38,13 +38,13 @@ $(document).ready(function () {
     copyIdShort.classList.remove("d-block");
     copyIdShort.classList.add("d-none");
 
-    /* Requisição Ajax dos Emoticons*/
+    /* Requisição Ajax dos Emojis*/
     $.ajax({
-        url: "emoticons.html", success: function (result) {
+        url: "emojis.html", success: function (result) {
             $("#recebEmo").html(result)
         }
     });
-
+ /* Requisição Ajax dos Emojis Fim*/
     $("#abrircampoEmo").click(function(){
        $("#recebEmo").slideToggle("slow");
     });
