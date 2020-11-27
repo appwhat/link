@@ -1,0 +1,33 @@
+<style>/* i.btnI{font-size: 16px;} */</style>
+
+
+<div id="getEmoji" class="d-flex row justify-content-center align-items-center">
+    <!-- Caras e pessoas -->
+    <i id="emojiId" AtributoEmoji="emojis/Carasepessoas.html" class="btnI mx-3 far fa-smile-beam fa-2x" style="color: #808080"></i>
+    <i id="emojiId" AtributoEmoji="emojis/Animaisenatureza.html" class="btnI mx-3 fas fa-cat fa-2x" style="color: #808080"></i>
+    <i id="emojiId" AtributoEmoji="emojis/alimentos.html" class="btnI mx-3 fas fa-mug-hot fa-2x" style="color: #808080"></i>
+    <i id="emojiId" AtributoEmoji="emojis/atividades.html" class="btnI mx-3 fas fa-futbol fa-2x" style="color: #808080"></i>
+    <!-- <i id="emojiId" AtributoEmoji="emojis/alimentos.html" class="btnI mx-3 fas fa-car fa-2x" style="color: #808080"></i> -->
+    <!-- <i id="" class="btnI mx-3 fas fa-lightbulb fa-2x" style="color: #808080"></i>
+    <i id="" class="btnI mx-3 fas fa-plus fa-2x" style="color: #808080"></i> -->
+    
+</div>
+<hr>
+<div id="receberGrupoEmoji">
+    
+</div>
+
+
+<script>
+    /* Recebendo paginas de emojis */
+$("#getEmoji #emojiId").click(function () {
+    var paginaEmoji = $(this).attr("AtributoEmoji")
+  $.ajax({
+      url: paginaEmoji, success: function (chamar) {
+          $("#receberGrupoEmoji").html(chamar)
+      }, error: function () {
+          alert("Não encontrado")
+      }
+  })
+})
+</script>
