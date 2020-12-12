@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
 
 .logo{
     width: 30px;
@@ -13,7 +14,9 @@
     background-color: #018ae6;
 }
 .verdezap{
-    font-family: 'Roboto', sans-serif;
+    text-transform: inherit;
+    font-family: 'Maven Pro', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color:white;
     background-color: #1ebea5;
     box-shadow: .5px 1px 10px 1px #888888;
@@ -54,7 +57,7 @@
 }
 .gerarlink{
     cursor: pointer;
-    color:#01e675;
+    color:#d5fce8;
     background-color: white;;
 }
 .vermais{
