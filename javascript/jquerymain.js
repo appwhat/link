@@ -1,18 +1,31 @@
 /* Esconder Campo de Mensagem e emoticons*/
-$(document).ready(function () {
-    $("#abrircampo").click(function () {
-        $("#menssagem").slideToggle("slow");
-        $("#abrircampoEmo").slideToggle("slow");
-        $("#iconeIniciarCnversar").slideToggle("slow");
-        $("#recebEmo").slideUp("slow");
+$(document).ready(() => {
+    /* -ChamadaAJaxDePartedoBody */   
+    $.ajax({ url: "componentNumber.html", success: function(resultado){ $("#receber").html(resultado)}})
+    /* ChamandoEmojis */
+    $.ajax({ url: "componentEmojis.html", success: function (result) {$("#recebEmo").html(result)}});
+
+    
+ /* slideToggle Requisição Ajax dos Emojis Fim*/
+    $("#abrircampoEmo").click(() =>{
+        $("#recebEmo").slideToggle("slow");
     });
+
+        
+    $("#abrircampo").click(() => {
+        /* Divs Toggadas */
+            $("#menssagem, #abrircampoEmo, #iconeIniciarCnversar").slideToggle("slow");
+            /* $("#abrircampoEmo").slideToggle("slow"); */
+            /* $("#iconeIniciarCnversar").slideToggle("slow"); */
+            $("#recebEmo").slideUp("slow");
+        });
     /* Esconder Campo Link Final*/
-    $("#resultadolink").click(function () {
+    $("#resultadolink").click(() => {
         $("#linkfinal").slideToggle("slow");
     })
     /* Copiar e Colar */
     $(function () {
-        $("#copiar").click(function () {
+        $("#copiar").click(() => {
             $("#linkfinal").slideToggle("slow");
             $('#linkfinal').select();
             var selecionar = document.execCommand('selectAll');
@@ -22,7 +35,7 @@ $(document).ready(function () {
 
     
     /* Encurtar URL */
-    $("#copyIdShort").click(function () {
+    $("#copyIdShort").click(() => {
         var pegarLink = $("#linkfinal").val();
         /*ShortLInk*/
         $.getJSON("https://is.gd/create.php?callback=?", {
@@ -38,18 +51,7 @@ $(document).ready(function () {
     copyIdShort.classList.remove("d-block");
     copyIdShort.classList.add("d-none");
 
-    /* Requisição Ajax dos Emojis*/
-    $.ajax({
-        url: "emojis.html", success: function (result) {
-            $("#recebEmo").html(result)
-        }
-    });
- /* Requisição Ajax dos Emojis Fim*/
-    $("#abrircampoEmo").click(function(){
-       $("#recebEmo").slideToggle("slow");
-    });
-        
-
+ 
 });
 /*
     $(function () {
