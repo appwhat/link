@@ -9,8 +9,8 @@ $(document).ready(() => {
         $.ajax({
             /* Enviando a DIV Emojis para o index.html */
             url: "componentEmojis.html",
-            success: function(o) {
-                $("#recebEmo").html(o)
+            success: function(result) {
+                $("#recebEmo").html(result)
             }
         })
 
@@ -31,15 +31,22 @@ $(document).ready(() => {
                     document.execCommand("selectAll"),
                         document.execCommand("copy")
                 })
-                /* Encurtador da pagina Whatas */
+                /* Encurtador da pagina Whats */
         }), $("#copyIdShort").click(() => {
-            var o = $("#linkfinal").val();
+            var urlFinal = $("#linkfinal").val();
             $.getJSON("https://is.gd/create.php?callback=?", {
-                    url: o,
+                    url: urlFinal,
                     format: "json"
                 })
-                .done(function(o) {
-                    linkfinal.innerHTML = o.shorturl
+                .done(function(resultado) {
+                    linkfinal.innerHTML = resultado.shorturl
+                        /* ----------------------------------- Zerando QRCOde DIV -----------------------------------*/
+                    $("#receberQrCOde").text("")
+                        /* ----------------------------------- QRCODE API   INICIO! -----------------------------------*/
+                    $("#receberQrCOde").qrcode({
+                            text: resultado.shorturl
+                        })
+                        /* ----------------------------------- QRCODE API FIM! -----------------------------------*/
                 }),
                 copyIdShort.classList.remove("d-block"),
                 copyIdShort.classList.add("d-none")
