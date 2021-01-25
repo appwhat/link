@@ -1,4 +1,5 @@
 function getLinkWA() {
+
     /* Campo Numero */
     var numero = document.querySelector("#number").value;
     /* Verificando se número e menor que 9 */
@@ -7,6 +8,7 @@ function getLinkWA() {
         numberErro.classList.add("text-danger");
     else {
         /* Se for maior que 9 faça isso */
+        $("#receberQrCOde").empty("")
         numberErro.classList.remove("text-danger"),
             resultadolink.classList.add("d-block"),
             copiar.classList.add("d-block"),
@@ -27,5 +29,15 @@ function getLinkWA() {
         linkfinal.innerHTML = resultado;
         /* Botão iniciar conversa com o link acima */
         iniciarconversa.href = resultado;
+
+
+        /* ----------------------------------- QRCODE API   INICIO! -----------------------------------*/
+        var criarQrCode = function() {
+            $("#receberQrCOde").qrcode({
+                text: resultado
+            })
+        }
+        criarQrCode()
+            /* ----------------------------------- QRCODE API FIM! -----------------------------------*/
     }
 }
