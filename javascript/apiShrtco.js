@@ -14,7 +14,18 @@ $(function() {
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
                         /* Limpando Div DO QrCOde */
                     $("#receberQrCodeShrtCode").text("")
-                        /* QR CODE Criador */
+
+
+                    /* Criando Historico */
+                    let site, url;
+                    site = fullLink
+                    url = new URL("https://" + linkShortShrtCode)
+                    localStorage.setItem(url, site)
+                        /* Criando Historico */
+
+
+
+                    /* QR CODE Criador */
                     $("#receberQrCodeShrtCode").qrcode({
                         text: `https://${linkShortShrtCode}`
                     })
@@ -32,7 +43,16 @@ $(function() {
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
                         /* Limpando Div DO QrCOde */
                     $("#receberQrCodeShrtCode").text("")
-                        /* QR CODE Criador */
+
+
+                    /* Criando Historico */
+                    let site, url;
+                    site = fullLink
+                    url = new URL("https://" + linkShortShrtCode)
+                    localStorage.setItem(url, site)
+                        /* Criando Historico */
+
+                    /* QR CODE Criador */
                     $("#receberQrCodeShrtCode").qrcode({
                         text: `https://${linkShortShrtCode}`
                     })
@@ -52,7 +72,16 @@ $(function() {
                     AcessarLinkEncurtadoShrtCode.href = "https://" + linkShortShrtCode
                         /* Limpando Div DO QrCOde */
                     $("#receberQrCodeShrtCode").text("")
-                        /* QR CODE Criador */
+
+                    /* Criando Historico */
+                    let site, url;
+                    site = fullLink
+                    url = new URL("https://" + linkShortShrtCode)
+                    localStorage.setItem(url, site)
+                        /* Criando Historico */
+
+
+                    /* QR CODE Criador */
                     $("#receberQrCodeShrtCode").qrcode({
                         text: `https://${linkShortShrtCode}`
                     })
