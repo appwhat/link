@@ -7,7 +7,9 @@ $(document).ready(function() {
         } else {
             var fullLink = linkCompletoTINYLINK.value;
             $.get(`https://tinyurl.com/api-create.php?url=${fullLink }`, function(fullLink) {
-                /* Limpando Div DO QrCOde */
+               
+            
+            /* Limpando Div DO QrCOde */
                 $("#receberQrCodeTiny").text("")
                 var linkShortTINYLINK = fullLink;
                 linkCurtoTiny.value = linkShortTINYLINK;
@@ -15,8 +17,18 @@ $(document).ready(function() {
                 $("#divLinkCopiarTINYLINK").slideDown("slow")
                     /* QR CODE Criador */
                 $("#receberQrCodeTiny").qrcode({
-                    text: linkShortTINYLINK
-                })
+                        text: linkShortTINYLINK
+                    })
+                    
+                    
+                    /* Criando Historico */
+                let site, url;
+                site = linkCompletoTINYLINK.value
+                url = new URL(linkShortTINYLINK)
+                localStorage.setItem(url, site)
+                    /* Criando Historico */
+
+                    
             })
         }
     })
