@@ -21,7 +21,17 @@ $(document).ready(function() {
                     linkCurtoISGD.value = data.shorturl
                     $("#divLinkCopiarIsGd").slideDown("slow")
                     AcessarLinkEncurtadoISGD.href = data.shorturl
-                        /* QR CODE Criador */
+
+
+
+                    /* Criando Historico */
+                    let site, url;
+                    site = longoURL
+                    url = new URL(data.shorturl)
+                    localStorage.setItem(url, site)
+                        /* Criando Historico */
+
+                    /* QR CODE Criador */
                     $("#receberQrCodeIsGd").qrcode({
                         text: data.shorturl
                     })
