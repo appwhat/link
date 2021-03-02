@@ -14,6 +14,7 @@
     <script src="javascript/tinyApi.js"></script>
     <script src="javascript/isGd.js"></script>
     <script src="javascript/apiShrtco.js"></script>
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styleMenu.css">
     <script src="javascript/loading.js"></script>
@@ -63,24 +64,21 @@
                 <span><i class="fas fa-history"></i> Histórico
             </a>
         </div>
-        <script> 
-        function menuToggle() {
-            $("#menuRight").slideToggle("fast")
-        }
+        <script>
+            function menuToggle() {
+                $("#menuRight").slideToggle("fast")
+            }
         </script>
         <!-- Fim -->
 
-
-
-
-
-
-
     </div>
     <div class="m-3 px-2" id="pagEncurtar">
+
+
         <div class="row justify-content-start align-items-center urlstatus">
-            <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-end"> <a href="http://tinyurl.com/"
-                    target="blank"><img width="80" src="image/tinyurl-plus.png"></a></div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-end">
+                <a href="http://tinyurl.com/" target="blank"><img width="80" src="image/tinyurl-plus.png"></a>
+            </div>
             <div class="col-8 col-sm-8 col-md-8 col-lg-6">
                 <h3>Tiny URL</h3>
                 <p>Expresso</p>
@@ -99,7 +97,8 @@
         <div id="divLinkCopiarTINYLINK" style="display: none">
             <div class="p-1 my-2 d-flex justify-content-between align-items-center">
                 <div class="col-10">
-                    <a id="AcessarLinkEncurtado" target="blank" href=""> <input readonly id="linkCurtoTiny" class="text-primary px-1" style="border: none; outline: 0; width: 100%;" value=""> </a>
+                    <a id="AcessarLinkEncurtado" target="blank" href=""> <input readonly id="linkCurtoTiny" class="text-primary px-1" style="border: none; outline: 0; width: 100%;" value="">
+                    </a>
                 </div>
                 <div class="btn btn-light btn-sm border col-auto" id="copiarTINYLINK"> <i class="fas fa-copy"></i>
                     <spand class="d-none d-sm-inline">Copiar</span>
@@ -114,7 +113,8 @@
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
             <a href="https://is.gd/index.php" target="bl ank">
-                <img width="80" src="image/isgd-plus.png"></div>
+                <img width="80" src="image/isgd-plus.png">
+        </div>
         <div class="col-auto">
             <h3>Is.Gd</h3>
             <p>Expresso</p>
@@ -146,7 +146,8 @@
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
             <a href="https://app.shrtco.de/" target="bl ank">
-                <img width="80" src="image/app-shrtco.png"></div>
+                <img width="80" src="image/app-shrtco.png">
+        </div>
         <div class="col-auto">
             <h3>Shrt Code</h3>
             <p>Expresso</p>
@@ -155,7 +156,8 @@
         <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
             <div class="d-flex justify-content-center align-items-center"> <label class="mx-2 bg-dark px-2 rounded text-light" for="shrtco">shrtco <input type="radio" checked
                             name="1" id="opcao1" value="shrtco.de"></label> <label class="mx-2 bg-dark px-2 rounded text-light" for="9qr">9qr <input type="radio" name="1"
-                            id="opcao2" value="9qr.de"></label> <label class="mx-2 bg-dark px-2 rounded text-light" for="shiny">shiny <input type="radio" name="1" id="opcao3" value="shiny.link"></label></div>
+                            id="opcao2" value="9qr.de"></label> <label class="mx-2 bg-dark px-2 rounded text-light" for="shiny">shiny
+                        <input type="radio" name="1" id="opcao3" value="shiny.link"></label></div>
             <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompleto3">
                 <div id="buttonEncurtarShrtCode" class="btn btn-sm" style="background-color: rgb(33, 37, 63);"> <i class="fas fa-compress-alt" style="color: rgb(255, 72, 0);"></i>
                     <spand class="d-none d-sm-inline text-light">Encurtar</span>
@@ -177,10 +179,49 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+
+
+
+    <!-- Qr Code Generate -->
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
-            <a href="https://bitly.com/" target="blank"> <img width="80" src="image/bitly.png" alt=""></div>
+            <a href="#" target="blank">
+                <img width="80" style="object-fit: cover;" src="image/qrCodeCreat.png">
+        </div>
+        <div class="col-auto">
+            <h3>Qr Code</h3>
+            <p>Expresso</p>
+            </a>
+        </div>
+        <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+            <div class="border p-1 my-1 d-flex justify-content-between align-items-center">
+                <input onkeyup="criarQrCode()" type="text" value="" id="inputCriadorQrCode" class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Crie seu Código Qr" />
+                <div id="buttonCriarQrCode" onclick="criarQrCode()" class="btn btn-secondary btn-sm">
+                    <i class="fas fa-qrcode" style="color: white;"></i>
+                    <span class="d-none d-sm-inline">Criar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom mb-3 container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
+        <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
+            <div id="receberQrCode"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Fim Qr Code -->
+
+
+
+    <div class="row justify-content-start align-items-center urlstatus">
+        <div class="col-4 col-lg-4 d-flex justify-content-end">
+            <a href="https://bitly.com/" target="blank"> <img width="80" src="image/bitly.png" alt="">
+        </div>
         <div class="col-auto">
             <h3>Bitly</h3>
             <p>Plano Gratuito</p>
@@ -189,7 +230,8 @@
     </div>
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
-            <a href="https://www.encurtador.com.br/" target="blank"><img width="80" src="image/encurtador.png" alt=""></div>
+            <a href="https://www.encurtador.com.br/" target="blank"><img width="80" src="image/encurtador.png" alt="">
+        </div>
         <div class="col-auto">
             <h3>Encurtador</h3>
             <p>Plano Gratuito</p>
@@ -198,7 +240,8 @@
     </div>
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
-            <a href="https://short.io/" target="blank"> <img width="80" src="image/short.png" alt=""></div>
+            <a href="https://short.io/" target="blank"> <img width="80" src="image/short.png" alt="">
+        </div>
         <div class="col-auto">
             <h3>Short.io</h3>
             <p>Plano Gratuito</p>
@@ -207,7 +250,8 @@
     </div>
     <div class="row justify-content-start align-items-center urlstatus">
         <div class="col-4 col-lg-4 d-flex justify-content-end">
-            <a href="http://bit.do/" target="blank"><img width="80" src="image/bit-do.png" alt="bit-do"></div>
+            <a href="http://bit.do/" target="blank"><img width="80" src="image/bit-do.png" alt="bit-do">
+        </div>
         <div class="col-auto">
             <h3>Bit.do/</h3>
             <p>Plano Gratuito</p>
@@ -219,7 +263,7 @@
     <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-border text-primary d-none">
         <div class="sr-only">Carregando...</div>
     </div>
-
+    <script src="javascript/criarQrCode.js"></script>
 </body>
 
 </html>
