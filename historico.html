@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <script src="https://kit.fontawesome.com/69d4cc193b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="javascript/index.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Whats Chat</title>
+    <style>
+        .menulink3::after {
+            content: "";
+            width: 80px;
+            position: absolute;
+            line-height: 5px;
+            background-color: white;
+            top: 25px;
+            left: -14px;
+            height: 6px
+        }
+        
+        a {
+            color: rgb(117, 117, 117);
+            list-style: none;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body onload="buscarHistorico()">
+    <div class="verdezap">
+        <div class="nav navbar navbar-light d-flex justify-content-around">
+            <a href="#" class="navbar-brand"> <img src="image/icon.png" alt="" class="align-top logo" alt="Logo" loading="lazy"> <span class="text-light titulo">What Shortener</span> </a>
+        </div>
+        <div class="my-1 d-flex justify-content-center">
+            <h2>Histórico</h2>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover" id="ulLista">
+            <thead>
+                <tr>
+                    <th scope="col">icone</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">URL Encurtada</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+
+    <script>
+        $(function() {
+            window.addEventListener('storage', function() {
+                window.location.reload()
+            })
+        })
+
+        if (localStorage.length <= 0) {
+            ulLista.innerHTML = `<div class="alert alert-secondary d-flex justify-content-center" role="alert">
+ Não existi Historico
+</div>`
+        } else {
+
+            function buscarHistorico() {
+                for (let i = 0; i < localStorage.length; i++) {
+                    let chave = localStorage.key(i)
+                    let lista = document.createElement("tbody")
+                    lista.innerHTML = `
+                    <tr class="w-100">
+                        <th scope="row-2"><img src="https://www.google.com/s2/favicons?domain=${chave}"></th>
+                        <td><a title="${chave}" target="blank" href="${chave}"> ${localStorage.getItem(chave)}</a> </td>
+                        <td><a title="${chave}" target="blank" href="${chave}">${chave}</a></td>
+                    </tr>`
+                    ulLista.append(lista)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
