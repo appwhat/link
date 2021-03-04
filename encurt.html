@@ -65,9 +65,17 @@
             </a>
         </div>
         <script>
+            var menuRight = document.getElementById("menuRight")
             function menuToggle() {
-                $("#menuRight").slideToggle("fast")
+                $(menuRight).slideDown("fast")
             }
+            document.addEventListener('mouseup', function(e){
+                e.preventDefault()
+                if(!menuRight.contains(e.target)){
+                    $("#menuRight").slideUp("fast");
+                }
+            })
+           
         </script>
         <!-- Fim -->
 
@@ -260,7 +268,8 @@
     </div>
     </div>
     <div id="divErro" class="alert alert-danger d-none" style="position: fixed; bottom: 10px; right: 10px;"></div>
-    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-border text-primary d-none">
+
+    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-grow text-primary d-none">
         <div class="sr-only">Carregando...</div>
     </div>
     <script src="javascript/criarQrCode.js"></script>
