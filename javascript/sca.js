@@ -1,25 +1,26 @@
-$(function () {
+$(function() {
 
     let scanner = new Instascan.Scanner({
-        video: document.getElementById('preview'), 
-        continuous: true, 
-        mirror: false, 
-        captureImage: true, 
+        video: document.getElementById('preview'),
+        continuous: true,
+        mirror: false,
+        captureImage: true,
         refractoryPeriod: 10000
     })
-    scanner.addListener('scan', function (content, image) {
+    scanner.addListener('scan', function(content, image) {
         /* var img = document.getElementById('img')
         img.src = image */
         var scanLink = document.getElementById('link')
         scanLink.href = content
         scanLink.innerHTML = content
     })
-    Instascan.Camera.getCameras().then(function (cameras) {
+    Instascan.Camera.getCameras().then(function(cameras) {
         console.log(cameras[0].name);
         /* Verificação se Existe a camera */
         if (cameras.length > 0) {
-            /* scanner.start(cameras[1]) */
-            $('[name="option"]').on('change', function () {
+            scanner.start(cameras[0])
+                /* scanner.start(cameras[1]) */
+            $('[name="option"]').on('change', function() {
                 if ($(this).val() == 1) {
                     if (cameras[0] != "") {
                         scanner.start(cameras[0])
@@ -38,7 +39,7 @@ $(function () {
             console.error('No cameras found.');
             alert('No cameras found.');
         }
-    }).catch(function (e) {
+    }).catch(function(e) {
         console.error(e);
         alert(e);
     })
