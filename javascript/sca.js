@@ -12,7 +12,7 @@ $(function() {
         img.src = image */
         var scanLink = document.getElementById('link')
             /* scanLink.href = content */
-        scanLink.innerHTML = content
+        scanLink.textContent = content
     })
     Instascan.Camera.getCameras().then(function(cameras) {
         console.log(cameras[0].name);
