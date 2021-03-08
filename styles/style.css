@@ -144,3 +144,22 @@ textarea {
     text-decoration: none;
     color: #000
 }
+
+
+/* Scanner Qr Code */
+
+#scanGrupoBotoes {
+    position: absolute;
+    top: 100px;
+}
+
+.linkResult {
+    position: fixed;
+    bottom: 0;
+    background-color: #8517df;
+}
+
+.qrCodeResultado {
+    text-decoration: none;
+    color: white;
+}
