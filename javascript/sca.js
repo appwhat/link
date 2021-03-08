@@ -11,7 +11,7 @@ $(function() {
         /* var img = document.getElementById('img')
         img.src = image */
         var scanLink = document.getElementById('link')
-        scanLink.href = content
+            /* scanLink.href = content */
         scanLink.innerHTML = content
     })
     Instascan.Camera.getCameras().then(function(cameras) {
