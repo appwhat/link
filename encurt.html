@@ -97,7 +97,7 @@
                         placeholder="Encurte seu link" value="" type="text" id="linkCompletoTINYLINK">
                     <div id="buttonEncurtarTINYLINK" class="btn btn-sm" style="background-color: rgb(0, 185, 206);"> <i
                             class="fas fa-compress-alt" style="color: #fff;"></i>
-                        <spand class="d-none d-sm-inline">Encurtar</span>
+                        <span class="d-none d-sm-inline">Encurtar</span>
         </div>
     </div>
     </div>
@@ -109,7 +109,7 @@
                     </a>
                 </div>
                 <div class="btn btn-light btn-sm border col-auto" id="copiarTINYLINK"> <i class="fas fa-copy"></i>
-                    <spand class="d-none d-sm-inline">Copiar</span>
+                    <span class="d-none d-sm-inline">Copiar</span>
                 </div>
             </div>
             <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
@@ -131,7 +131,7 @@
         <div class="container-fluid col-sm-12 col-md-10 col-lg-8 col-xl-8">
             <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompleto2">
                 <div id="buttonEncurtarISGD" class="btn btn-danger btn-sm"> <i class="fas fa-compress-alt" style="color: yellow;"></i>
-                    <spand class="d-none d-sm-inline">Encurtar</span>
+                    <span class="d-none d-sm-inline">Encurtar</span>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
                         <a id="AcessarLinkEncurtadoISGD" target="blank" href=""> <input readonly id="linkCurtoISGD" class="text-primary d-flex w-100 mr-1" style="border: none; outline: 0; width: 100%;" value="Leandro"> </a>
                     </div>
                     <div class="btn btn-light btn-sm border" id="copiarTimiLinkISGD"> <i class="fas fa-copy"></i>
-                        <spand class="d-none d-sm-inline">Copiar</span>
+                        <span class="d-none d-sm-inline">Copiar</span>
                     </div>
                 </div>
                 <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
@@ -168,7 +168,7 @@
                         <input type="radio" name="1" id="opcao3" value="shiny.link"></label></div>
             <div class="border p-1 my-1 d-flex justify-content-between align-items-center"> <input class="linkGrande d-flex w-95 mr-1 text-center" style="border: none; outline: 0;" placeholder="Encurte seu link" value="" type="text" id="linkCompleto3">
                 <div id="buttonEncurtarShrtCode" class="btn btn-sm" style="background-color: rgb(33, 37, 63);"> <i class="fas fa-compress-alt" style="color: rgb(255, 72, 0);"></i>
-                    <spand class="d-none d-sm-inline text-light">Encurtar</span>
+                    <span class="d-none d-sm-inline text-light">Encurtar</span>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@
                         <a id="AcessarLinkEncurtadoShrtCode" target="blank" href=""> <input readonly id="linkCurtoShrtCode" class="text-primary d-flex w-100 mr-1" style="border: none; outline: 0; width: 100%;" value=""> </a>
                     </div>
                     <div class="btn btn-light btn-sm border" id="copiarTimiLinkShrtCode"> <i class="fas fa-copy"></i>
-                        <spand class="d-none d-sm-inline">Copiar</span>
+                        <span class="d-none d-sm-inline">Copiar</span>
                     </div>
                 </div>
                 <div class="p-2 d-flex justify-content-center align-items-center text-align-center">
@@ -267,9 +267,10 @@
         </div>
     </div>
     </div>
-    <div id="divErro" class="alert alert-danger d-none" style="position: fixed; bottom: 10px; right: 10px;"></div>
+    <!-- Erro -->
+    <div id="divErro" class="alert alert-danger" style="position: fixed; bottom: 10px; right: 10px; display: none;"></div>
 
-    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-grow text-primary d-none">
+    <div id="carregando" style="position: fixed; bottom: 10px; right: 10px; display: none;" class="spinner-grow text-primary">
         <div class="sr-only">Carregando...</div>
     </div>
     <script src="javascript/criarQrCode.js"></script>
