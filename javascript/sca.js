@@ -10,9 +10,12 @@ $(function() {
     scanner.addListener('scan', function(content, image) {
         /* var img = document.getElementById('img')
         img.src = image */
+
         var scanLink = document.getElementById('link')
+        var divResultado = document.querySelector('.linkResult')
+        divResultado.style.display = "block"
             /* scanLink.href = content */
-        scanLink.textContent = content
+        scanLink.value = content
     })
     Instascan.Camera.getCameras().then(function(cameras) {
         console.log(cameras[0].name);
@@ -44,4 +47,8 @@ $(function() {
         alert(e);
     })
 
+    $("#link").click(() => {
+        $("#link").select()
+        document.execCommand('copy')
+    })
 })
