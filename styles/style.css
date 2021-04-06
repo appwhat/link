@@ -154,12 +154,21 @@ textarea {
 }
 
 .linkResult {
+    text-align: center;
+    padding: 4px;
+    display: none;
+    width: 100%;
     position: fixed;
     bottom: 0;
     background-color: #8517df;
 }
 
 .qrCodeResultado {
+    width: 100%;    
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
     text-decoration: none;
     color: white;
     word-break: break-all;
