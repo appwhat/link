@@ -162,4 +162,5 @@ textarea {
 .qrCodeResultado {
     text-decoration: none;
     color: white;
+    word-break: break-all;
 }
