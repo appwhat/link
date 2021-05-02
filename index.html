@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="javascript/loading.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js"></script>
+       <!-- hammersJs -->
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     <title>What Chat</title>
     <style>
         .menulink1::after {
@@ -71,6 +73,15 @@
     <div id="carregando" style="position: fixed; bottom: 10px; right: 10px;" class="spinner-grow text-success d-none">
         <div class="sr-only">Carregando...</div>
     </div>
+     <script>
+        var corpo = document.getElementsByTagName("body")[0]
+
+        var mc = new Hammer(corpo)
+
+        mc.on("panleft", (e) => {
+            window.location = "http://127.0.0.1:5500/encurt.html"
+        })
+    </script>
 </body>
 
 </html>
