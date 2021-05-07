@@ -59,7 +59,7 @@
 
     <div class="d-flex justify-content-center my-3">
         <div id="btnHistorico" class="btn btn-outline-danger btn-sm">
-            <i class="fas fa-trash-alt mx-1 "></i> Limpar Histórico
+            <i class="fas fa-trash-alt mx-1 "></i>Limpar Histórico
         </div>
     </div>
 
@@ -97,12 +97,22 @@
                 for (let i = 0; i < localStorage.length; i++) {
                     let chave = localStorage.key(i)
                     let lista = document.createElement("tbody")
-                    lista.innerHTML = `
+                    if (localStorage.getItem(chave).length > 30) {
+                        lista.innerHTML = `
                     <tr class="w-100">
                         <th scope="row-2"><img src="https://www.google.com/s2/favicons?domain=${chave}"></th>
-                        <td><a title="${chave}" target="blank" href="${chave}"> ${localStorage.getItem(chave)}</a> </td>
+                        <td><a title="${localStorage.getItem(chave)}" target="blank" href="${chave}"> ${localStorage.getItem(chave).slice(0, 30)}...</a> </td>
                         <td><a title="${chave}" target="blank" href="${chave}">${chave}</a></td>
                     </tr>`
+                    } else {
+                        lista.innerHTML = `
+                    <tr class="w-100">
+                        <th scope="row-2"><img src="https://www.google.com/s2/favicons?domain=${chave}"></th>
+                        <td><a title="${localStorage.getItem(chave)}" target="blank" href="${chave}"> ${localStorage.getItem(chave)}</a> </td>
+                        <td><a title="${chave}" target="blank" href="${chave}">${chave}</a></td>
+                    </tr>`
+                    }
+
                     ulLista.append(lista)
                 }
             }
